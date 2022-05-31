@@ -1,10 +1,10 @@
 =======================================
-Zuru Tech Cookiecutter PyPackage 🍪 🐍
+Mr. Ubik Cookiecutter PyPackage 🍪 🐍
 =======================================
 
 |development-status| |pyup| |license| |travis|
 
-Cookiecutter_ opinionated template for a Python package compliant with `zurutech/styleguide`_.
+Cookiecutter_ opinionated template for a Python package compliant with `mr-ubik/styleguide`_.
 
 Features
 --------
@@ -156,7 +156,7 @@ be a fork.
 .. _Tox: http://testrun.org/tox/
 .. _Travis-CI: http://travis-ci.org/
 
-.. _`zurutech/styleguide`: https://github.com/zurutech/styleguide
+.. _`mr-ubik/styleguide`: https://github.com/mr-ubik/styleguide
 
 .. _`cookiecutter-pypackage tutorial`: https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html
 .. _`pip docs for requirements files`: https://pip.pypa.io/en/stable/user_guide/#requirements-files
