@@ -15,7 +15,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/badge)](https://www.codefactor.io/repository/github/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }})
 {%- endif -%}
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
-[![Code Style - Zuru](https://img.shields.io/badge/codestyle-zuru-red)](https://github.com/zurutech/styleguide)
+[![Code Style - Ubik](https://img.shields.io/badge/codestyle-zuru-red)](https://github.com/mr-ubik/styleguide#Python)
 [![Black - Badge](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
@@ -41,12 +41,12 @@ tox
 
 ## Credits
 
-This package was created with [Cookiecutter] and the [zurutech/cookiecutter-pypackage] project template.
+This package was created with [Cookiecutter] and the [mr-ubik/cookiecutter-pypackage] project template.
 
-Requirements are structured according to [zurutech/styleguide] and should be handled with [pip-tools] or [reqompyler].
+Requirements are structured according to [mr-ubik/styleguide] and should be handled with [pip-tools] or [reqompyler].
 
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
 [pip-tools]: https://github.com/jazzband/pip-tools
 [reqompyler]: https://github.com/zurutech/reqompyler
-[zurutech/cookiecutter-pypackage]: https://github/zurutech/cookiecutter-pypackage
-[zurutech/styleguide]: https://github.com/zurutech/styleguide/python.md
+[mr-ubik/cookiecutter-pypackage]: https://github/mr-ubik/cookiecutter-pypackage
+[mr-ubik/styleguide]: https://github.com/mr-ubik/styleguide/python.md
