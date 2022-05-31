@@ -9,7 +9,7 @@ Cookiecutter_ opinionated template for a Python package compliant with `mr-ubik/
 Features
 --------
 
-* Testing setup with pytest_
+* Testing setup with pytest_ and hypothesis_
 * Travis-CI_: Ready for Travis Continuous Integration testing
 * Tox_ automation:
     * Testing: Setup to easily test for Python 3.6, 3.7, 3.8 with code coverage computation and upload via codecov_
@@ -133,6 +133,7 @@ be a fork.
 .. _doc8: https://github.com/PyCQA/doc8
 .. _flake8-bugbear: https://github.com/PyCQA/flake8-bugbear
 .. _flake8: https://github.com/PyCQA/flake8
+.. _hypothesis: https://github.com/HypothesisWorks/hypothesis
 .. _isort: https://github.com/timothycrosley/isort
 .. _licenseheaders: https://github.com/johann-petrak/licenseheaders
 .. _m2r: https://github.com/miyakogi/m2r
