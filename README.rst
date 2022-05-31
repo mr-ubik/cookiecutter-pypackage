@@ -23,7 +23,7 @@ Features
     * Integrate Markdown and RST via m2r_
     * sphinx-copybutton_
     * doc8_ and pydocstyle_
-* Opinionated configurations enforcing compliance with `zurutech/styleguide`_ for:
+* Opinionated configurations enforcing compliance with `mr-ubik/styleguide`_ for:
     * isort_
     * pylint_
     * flake8_ extended via flake8-bugbear_
