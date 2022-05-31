@@ -44,7 +44,7 @@ Cookiecutter 1.4.0 or higher)::
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/zurutech/cookiecutter-pypackage.git
+    cookiecutter https://github.com/mr-ubik/cookiecutter-pypackage.git
 
 Then:
 
@@ -76,6 +76,8 @@ Similar Cookiecutter Templates
 * `audreyr/cookiecutter-pypackage`_: The One and only. This is the original ``pypackage``
   Cookiecutter. `zurutech/cookiecutter-pypackage`_ started as an internal fork of this one and became
   more opinionated over time.
+
+* `zurutech/cookiecutter-pypackage`_: The OG Zuru Tech. version of this cookiecutter template. 
 
 * `ionelmc/cookiecutter-pylibrary`_: Cookiecutter template for a Python python library.
   Extremely configurable. `zurutech/cookiecutter-pypackage`_ is a cross between this and `audreyr/cookiecutter-pypackage`_
