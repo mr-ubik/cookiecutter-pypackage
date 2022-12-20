@@ -43,8 +43,6 @@ tox
 
 This package was created with [Cookiecutter] and the [mr-ubik/cookiecutter-pypackage] project template.
 
-Requirements are structured according to [mr-ubik/styleguide] and should be handled with [pip-tools] or [reqompyler].
-
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
 [pip-tools]: https://github.com/jazzband/pip-tools
 [reqompyler]: https://github.com/zurutech/reqompyler

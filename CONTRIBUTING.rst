@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/zurutech/cookiecutter-pypackage/issues
+Report bugs at https://github.com/mr-ubik/cookiecutter-pypackage/issues
 
 If you are reporting a bug, please include:
 
@@ -42,7 +42,7 @@ official docs, in docstrings, or even on the web in blog posts, articles, and su
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/zurutech/cookiecutter-pypackage/issues.
+The best way to send feedback is to file an issue at https://github.com/mr-ubik/cookiecutter-pypackage/issues.
 
 If you are proposing a new feature:
 
@@ -90,7 +90,7 @@ you already have `virtualenv` and `Git` installed and ready to go.
 
     $ flake8 ./tests
 
-6. The next step would be to run the test cases. `cookiecutter-pypackage` uses py.test, you can run PyTest. Before you run pytest you should ensure all dependancies are installed::
+6. The next step would be to run the test cases. ``cookiecutter-pypackage`` uses ``py.test``, you can run PyTest. Before you run pytest you should ensure all dependancies are installed::
 
   .. code-block:: bash
 
@@ -103,7 +103,7 @@ you already have `virtualenv` and `Git` installed and ready to go.
     # Update pip
     $ pip install -U pip
 
-7. Before raising a pull request you should also run tox. This will run the tests across different versions of Python::
+7. Before raising a pull request you should also run ``tox``. This will run the tests across different versions of Python::
 
   .. code-block:: bash
 
@@ -136,7 +136,7 @@ Before you submit a pull request, check that it meets these guidelines:
    feature to the list in README.rst.
 
 3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
-   https://travis-ci.org/audreyr/cookiecutter-pypackage/pull_requests
+   https://travis-ci.org/mr-ubik/cookiecutter-pypackage/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Add a New Test
@@ -167,6 +167,6 @@ To write and run your new test, follow these steps:
 
 6. Rerun your test and confirm that your test passes. If it passes, congratulations!
 
-.. cookiecutter: https://github.com/audreyr/cookiecutter-pypackage
+.. cookiecutter: https://github.com/mr-ubik/cookiecutter-pypackage
 .. virtualenv: https://virtualenv.pypa.io/en/stable/installation
 .. git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git

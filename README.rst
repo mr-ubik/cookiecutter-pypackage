@@ -9,10 +9,11 @@ Cookiecutter_ opinionated template for a Python package compliant with `mr-ubik/
 Features
 --------
 
+* 120 Line Length default, in an age of ultrawide monitors, 120 characters line are fine.
 * Testing setup with pytest_ and hypothesis_
 * Travis-CI_: Ready for Travis Continuous Integration testing
 * Tox_ automation:
-    * Testing: Setup to easily test for Python 3.6, 3.7, 3.8 with code coverage computation and upload via codecov_
+    * Testing: Setup to easily test for Python >= 3.6 with code coverage computation and upload via codecov_
     * Linting: Setup to automatically lint your codebase with black_, isort_, pylint_, flake8_
     * Docs: Setup to easily generate docs for local reading
 * Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
@@ -24,18 +25,18 @@ Features
     * sphinx-copybutton_
     * doc8_ and pydocstyle_
 * Opinionated configurations enforcing compliance with `mr-ubik/styleguide`_ for:
+    * black_
     * isort_
     * pylint_
-    * flake8_ extended via flake8-bugbear_
 * Easy refactoring with rope_
-* Modular requirements.in structure to be used with reqompyler_ or pip-tools_
+* Requiremnts management with pip-tools_ and ``pyproject.toml`` (PEP 621 compliant)
 * Auto-release to PyPI_ when you push a new tag to master (optional)
 * Command line interface using Click_ (optional)
 
 Quickstart
 ----------
 
-This is the flow we reccommend for new projects.
+This is the flow I recommend for new projects.
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires
 Cookiecutter 1.4.0 or higher)::
@@ -58,9 +59,6 @@ Then:
   and activate automated deployment on PyPI when you push a new tag to master branch.
 * Add the repo to your ReadTheDocs_ account + turn on the ReadTheDocs service hook.
 * Release your package by pushing a new tag to master.
-* Activate your project on `pyup.io`_ (`pyup.io`_ is a service that helps in keeping dependencies
-  fresh by automatically generating a PR whenever one of them gets a new release,
-  it's free for public repos).
 
 For more details, see the `cookiecutter-pypackage tutorial`_.
 
@@ -77,7 +75,7 @@ Similar Cookiecutter Templates
   Cookiecutter. `zurutech/cookiecutter-pypackage`_ started as an internal fork of this one and became
   more opinionated over time.
 
-* `zurutech/cookiecutter-pypackage`_: The OG Zuru Tech. version of this cookiecutter template. 
+* `zurutech/cookiecutter-pypackage`_: The OG Zuru Tech. version of this cookiecutter template.
 
 * `ionelmc/cookiecutter-pylibrary`_: Cookiecutter template for a Python python library.
   Extremely configurable. `zurutech/cookiecutter-pypackage`_ is a cross between this and `audreyr/cookiecutter-pypackage`_
@@ -133,8 +131,6 @@ be a fork.
 .. _codecov: https://github.com/codecov/codecov-python
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _doc8: https://github.com/PyCQA/doc8
-.. _flake8-bugbear: https://github.com/PyCQA/flake8-bugbear
-.. _flake8: https://github.com/PyCQA/flake8
 .. _hypothesis: https://github.com/HypothesisWorks/hypothesis
 .. _isort: https://github.com/timothycrosley/isort
 .. _licenseheaders: https://github.com/johann-petrak/licenseheaders
@@ -143,7 +139,6 @@ be a fork.
 .. _pydocstyle: https://github.com/PyCQA/pydocstyle
 .. _pylint: https://github.com/PyCQA/pylint
 .. _pytest: https://github.com/pytest-dev/pytest
-.. _reqompyler: https://github.com/zurutech/reqompyler
 .. _rope: https://github.com/python-rope/rope
 .. _sphinx-autodoc-typehints: https://github.com/agronholm/sphinx-autodoc-typehints
 .. _sphinx-copybutton: https://github.com/choldgraf/sphinx-copybutton

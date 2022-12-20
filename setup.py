@@ -3,14 +3,14 @@
 from distutils.core import setup
 
 setup(
-    name="zurutech-cookiecutter-pypackage",
+    name="ubik-cookiecutter-pypackage",
     packages=[],
-    version="0.1.0",
+    version="0.2.0",
     description="Opinionated Cookiecutter template for a Python package",
-    author="Machine Learning Team @ Zuru Tech",
+    author='Michele "Ubik" De Simoni',
     license="BSD",
-    author_email="ml@zuru.tech",
-    url="https://github.com/zurutech/cookiecutter-pypackage",
+    author_email="contact@ubik.tech",
+    url="https://github.com/mr-ubik/cookiecutter-pypackage",
     keywords=["cookiecutter", "template", "package"],
     python_requires=">=3.7",
     classifiers=[
@@ -22,6 +22,8 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Software Development",
     ],
 )

@@ -1,31 +1,61 @@
-[tool.black]
-line-length = 88
-target-version = ['py37']
-include = '\.pyi?$'
-exclude = '''
+[project]
+    authors = [
+        { email = "contact@ubik.tech", name = 'Michele "Ubik" De Simoni' },
+    ]
+    classifiers = [
+        "Development Status :: 4 - Beta",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Software Development",
+    ]
+    dependencies = ["cookiecutter>=1.4.0"]
+    description = "Opinionated Cookiecutter template for new Python packages."
+    license = { file = "LICENSE.txt" }
+    maintainers = [
+        { email = "contact@ubik.tech", name = 'Michele "Ubik" De Simoni' },
+    ]
+    name = "cookiecutter-pypackage"
+    readme = "README.rst"
+    requires-python = ">=3.7"
+    version = "0.2.0"
 
-(
-  /(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.tox
-    | \.venv
-    | _build
-    | buck-out
-    | build
-    | dist
-    | libs
-    | {{ cookiecutter.repo_name }} # Exclude cookiecutter template or black will go crazy.
-  )/
-)
-'''
+    [project.optional-dependencies]
+        dev = ["rope"]
+        docs = ["pydocstyle", "sphinx"]
+        linting = [
+            "black",
+            "isort[requirements,pyproject]",
+            "mypy",
+            "pylint",
+
+        ]
+        test = ["pytest", "pytest-cookies", "pytest-cov", "pyyaml", "tox"]
+
+    [project.urls]
+        changelog     = "https://github.com/mr-ubik/cookiecutter-pypackage/blob/master/CHANGELOG.md"
+        documentation = "https://github.com/mr-ubik/cookiecutter-pypackage"
+        homepage      = "https://github.com/mr-ubik/cookiecutter-pypackage"
+        repository    = "https://github.com/mr-ubik/cookiecutter-pypackage"
+
+
+[build-system]
+    build-backend = "setuptools.build_meta"
+    requires      = ["wheel", "setuptools"]
+
+[tool.black]
+    line-length = 120
 
 [tool.isort]
-multi_line_output=3
-include_trailing_comma=true
-force_grid_wrap=0
-use_parentheses=true
-line_length=88
-skip=["docs/conf.py", "{{ cookiecutter.repo_name }}"]
+    line_length = 120
+    profile     = "black"
+    skip        = "docs/source/conf.py"
+
+[tool.pylint.format]
+    max-line-length = "120"

@@ -1,34 +1,71 @@
+{%-
+set license_classifiers = {
+    'MIT License': 'License :: OSI Approved :: MIT License',
+    'BSD License': 'License :: OSI Approved :: BSD License',
+    'ISC License': 'License :: OSI Approved :: ISC License (ISCL)',
+    'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License 2.0',
+    'GNU General Public License v3.0': 'License :: OSI Approved :: GNU General Public License v3.0 (GPLv3.0)'
+}
+-%}
+[project]
+    authors = [
+        {name = "{{cookiecutter.author.replace('\"', '\\\"')}}", email = "{{cookiecutter.email}}"}
+    ]
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Developers',
+{%- if cookiecutter.open_source_license in license_classifiers %}
+        '{{ license_classifiers[cookiecutter.open_source_license] }}',
+{%- endif %}
+        'Natural Language :: English',
+{%- for version in cookiecutter.python_version.split(", ") %}
+        'Programming Language :: Python :: {{ version }}',
+{%- endfor %}
+    ]
+    dependencies = [{%- if cookiecutter.command_line_interface|lower == "click" %}"Click>=7.0",{%- endif -%}]
+    description="{{ cookiecutter.project_short_description }}"
+{%- if cookiecutter.open_source_license in license_classifiers %}
+    license={ file = "LICENSE.txt" }
+{%- endif %}
+    name = "{{ cookiecutter.package_name }}"
+    readme = "README.rst"
+    requires-python = ">={{ cookiecutter.python_version.split(', ') | sort() | first()}}"
+    version = '{{cookiecutter.version}}'
+
+    {%- if cookiecutter.command_line_interface|lower == "click" %}
+    [project.entry-points."{{ cookiecutter.package_name }}"]
+        cli = "{{ cookiecutter.package_name }}.cli:main"
+    {%- endif %}
+
+    [project.optional-dependencies]
+        dev = ["rope"]
+        docs = ["pydocstyle", "sphinx"]
+        linting = [
+            "black",
+            "isort[requirements,pyproject]",
+            "mypy",
+            "pylint",
+
+        ]
+        test = ["pytest", "hypothesis", "pytest-cov", "tox"]
+
+    [project.urls]
+        changelog     = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}/blob/master/CHANGELOG.md"
+        documentation = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}"
+        homepage      = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}"
+        repository    = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}"
+
 [build-system]
-requires = ["wheel", "setuptools"]
-build-backend = "setuptools.build_meta"
+    build-backend = "setuptools.build_meta"
+    requires      = ["wheel", "setuptools"]
 
 [tool.black]
-line-length = 88
-target-version = ['py37']
-include = '\.pyi?$'
-exclude = '''
-
-(
-  /(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.tox
-    | \.venv
-    | _build
-    | buck-out
-    | build
-    | dist
-    | libs
-  )/
-)
-'''
+    line-length = 120
 
 [tool.isort]
-multi_line_output=3
-include_trailing_comma=true
-force_grid_wrap=0
-use_parentheses=true
-line_length=88
-skip="docs/source/conf.py"
+    line_length = 120
+    profile     = "black"
+    skip        = "docs/source/conf.py"
+
+[tool.pylint.format]
+    max-line-length = "120"

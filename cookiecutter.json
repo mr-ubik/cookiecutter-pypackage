@@ -1,5 +1,5 @@
 {
-    "full_name": "Zuru Tech HK Limited, All rights reserved.",
+    "full_name": "",
     "author": "",
     "email": "",
     "project_name": "Python Boilerplate",
@@ -7,23 +7,26 @@
     "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "distribution_name": "{{ cookiecutter.repo_name }}",
     "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
-    "python_version": "3.7, 3.8",
+    "python_version": "3.7, 3.8, 3.9, 3.10",
     "version": "0.1.0",
     "gitignore": "y",
     "use_pytest": "y",
-    "command_line_interface": ["Click", "No command-line interface"],
+    "command_line_interface": [
+        "Click",
+        "No command-line interface"
+    ],
     "create_author_file": "y",
     "open_source_license": [
-        "Not open source",
-        "MIT license",
-        "BSD license",
-        "ISC license",
+        "MIT License",
+        "BSD License",
+        "ISC License",
         "Apache Software License 2.0",
-        "GNU General Public License v3"
+        "GNU General Public License v3.0",
+        "Not open source"
     ],
     "github_username": "",
     "pypi_username": "{{ cookiecutter.github_username }}",
-    "use_pypi_deployment_with_travis": "y",
+    "use_pypi_deployment_with_travis": "n",
     "auto_deploy_with_travis_on_new_tag": "{{ 'n' if cookiecutter.use_pypi_deployment_with_travis == 'n' else 'y' }}",
-    "add_pyup_badge": "y"
+    "add_pyup_badge": "n"
 }

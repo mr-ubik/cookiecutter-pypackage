@@ -50,31 +50,33 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.package_name }}` for 
 
 1. Clone `{{ cookiecutter.repo_name }}` from the internal GitHub:
 
-    ```
+    ```console
     $ git clone ssh://git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
     ```
 
 2. Install your local copy into a virtualenv. Assuming you have [virtualenvwrapper]
    installed, this is how you set up your fork for local development:
 
-    ```
+    ```console
     $ mkvirtualenv {{ cookiecutter.repo_name }}
     $ cd {{ cookiecutter.repo_name }}/
     $ pip install -e .
     ```
 
 3. To get the dev toolchain just pip install the provided requirements into your virtualenv.
-   **NOTE:** following [zurutech/styleguide] requirements are defined in `requirements.in`
-   folder as text files compliant with the `.in` format specified by [pip-tools].
-   Pinned versions are generated using [reqompyler].
+   **NOTE:** following [mr-ubik/styleguide] requirements are defined in the `pyproject.toml` file
+   according to [PEP 621]. Pinned versions are generated using [pip-tools].
 
-    ```
+    ```console
+    $ pip-compile -o requirements.txt pyproject.toml
     $ pip install -r requirements.txt
+    $ pip-compile --extra dev --extra linting --extra docs --extra test -o dev-requirements.txt pyproject.toml
+    $ pip install -r dev-requirements.txt
     ```
 
 4. Create a branch for local development:
 
-    ```
+    ```console
     $ git checkout -b name-of-your-bugfix-or-feature
     ```
 
@@ -149,7 +151,6 @@ Travis will then deploy to PyPI if tests pass.
 [pylint]: https://github.com/PyCQA/pylint
 [pytest-cov]: https://github.com/pytest-dev/pytest-cov
 [pytest]: https://github.com/pytest-dev/pytest
-[reqompyler]: https://github.com/zurutech/reqompyler
 [tox]: https://github.com/tox-dev/tox
 [virtualenvwrapper]: https://virtualenvwrapper.readthedocs.io/en/master/
-[zurutech/styleguide]: https://github.com/zurutech/styleguide/python.md
+[mr-ubik/styleguide]: https://github.com/mr-ubik/styleguide/python.md
